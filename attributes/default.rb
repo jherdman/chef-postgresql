@@ -8,6 +8,7 @@
 #
 
 default["postgresql"]["version"]                         = "9.3"
+default["postgresql"]["version_action"]                  = "install"
 default["postgresql"]["apt_distribution"]                = node["lsb"]["codename"]
 
 default["postgresql"]["environment_variables"]           = {}
