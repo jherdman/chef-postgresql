@@ -14,4 +14,6 @@ apt_repository "apt.postgresql.org" do
 end
 
 # automatically get repository key updates
-package "pgdg-keyring"
+package "pgdg-keyring" do
+  action :"#{node["postgresql"]["version_action"]}"
+end

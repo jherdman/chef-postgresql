@@ -22,5 +22,6 @@ end
 %w[libpq5 postgresql-common].each do |pkg|
   package pkg do
     options "-t #{node["lsb"]["codename"]}-backports"
+    action :"#{node["postgresql"]["version_action"]}"
   end
 end
